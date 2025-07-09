@@ -115,8 +115,8 @@ Um den wahren Nutzen aus dem Skript zu ziehen, solltest du es automatisch in reg
 2.  Füge die folgende Zeile am Ende der Datei hinzu, um das Skript z.B. **jeden ersten Tag des Monats um 02:30 Uhr** auszuführen.
 
     ```crontab
-    # Führe das Skript jeden Tag um 02:30 Uhr aus, das Skript selbst prüft, ob 90 Tage vergangen sind
-    30 2 * * * if [ $(($(date +%s) / 86400 % 90)) -eq 0 ]; then /usr/bin/python3 /pfad/zu/deinem/projekt/main.py; fi
+    # Führe das Datenbroker Löschungs Skript am 1. Tag um 02:30 Uhr (Jan, Apr, Jul, Okt) in der venv aus
+    30 2 1 1,4,7,10 * cd /pfad/zu/deinem/projekt && /pfad/zu/deinem/projekt/.venv/bin/python3 main.py
     ```
 
     **Wichtig:** Ersetze `/pfad/zu/deinem/projekt/` durch den vollständigen, absoluten Pfad zu deinem Projektordner.
