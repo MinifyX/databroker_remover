@@ -1,0 +1,4 @@
+Name: Max Mustermann
+Adresse: Musterstraße. 123, 45678 Musterstadt, Musterland
+Email: m.mustermann@mailprovider.xy
+Telefon: +4916212345678
